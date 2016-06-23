@@ -248,6 +248,14 @@ module.exports = function(grunt) {
                 dest: localCfg.outDir,
                 cwd: localCfg.srcDir
             },
+            bundleConfig: {
+                expand: true,
+                src: [
+                    "tns-core-modules/bundle-entry-points.js",
+                ],
+                dest: localCfg.outDir,
+                cwd: localCfg.srcDir
+            },
             articleMDs: {
                 expand: true,
                 src: [ "**/*.md" ],
@@ -737,6 +745,30 @@ module.exports = function(grunt) {
         moveSinglesUp(localCfg.outArticlesDir);
     });
 
+    grunt.registerTask("write-bundle-entry-points", function() {
+        var packageJsons = shelljs.find("tns-core-modules").filter(function(f) {
+            return f.match(/package.json$/);
+        }).filter(function(f) {
+            var packageInfo = grunt.file.readJSON(f);
+            return packageInfo.bundleEntryPoint;
+        });
+        var packages = packageJsons.map(function(f) {
+            return f.replace(/tns-core-modules[\\\/](.*)[\/\\]package.json/, "$1")
+        });
+
+        var registrationTemplate = '    global.registerModule("MODULE", () => require("MODULE"))';
+        var registrationLines = packages.map(function(package) {
+            return registrationTemplate.replace(/MODULE/g, package);
+        });
+        var registrationCode = registrationLines.join("\n");
+
+        var registrationFile = path.join(localCfg.outTnsCoreModules, "bundle-entry-points.js")
+        shelljs.sed("-i", /(\/\/ENTRYPOINT REGISTRATION START)(.|\n)*(\/\/ENTRYPOINT REGISTRATION END)/m, "$1\n$3", registrationFile);
+        shelljs.sed("-i", /(ENTRYPOINT REGISTRATION START)/, "$1\n\n" + registrationCode + "\n", registrationFile);
+    });
+
+    grunt.registerTask("register-bundle-entrypoints", ["copy:bundleConfig", "write-bundle-entry-points"]);
+
     grunt.registerTask("generate-tns-core-modules-dev-dts", generateModulesDts.bind(null, ".", localCfg.srcTnsCoreModules));
     grunt.registerTask("generate-tns-core-modules-dts", generateModulesDts.bind(null, localCfg.outDir, localCfg.outTnsCoreModules));
     //aliasing pack-modules for backwards compatibility
@@ -776,6 +808,7 @@ module.exports = function(grunt) {
         "copy:jsLibs",
         "generate-tns-core-modules-dts",
         "ts:testCombinedDts",
+        "register-bundle-entrypoints",
     ]);
 
     //alias just-build for backwards compatibility

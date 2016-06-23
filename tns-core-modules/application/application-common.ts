@@ -1,4 +1,5 @@
-﻿require("globals");
+﻿import "globals";
+import "../bundle-entry-points";
 import definition = require("application");
 import observable = require("data/observable");
 import frame = require("ui/frame");

@@ -80,8 +80,6 @@ export module ad {
                 clipPathValue,
                 (backgroundValue.color && backgroundValue.color.android) ? backgroundValue.color.android : 0,
                 (backgroundValue.image && backgroundValue.image.android) ? backgroundValue.image.android : null,
-                (backgroundValue.image && backgroundValue.image.android) ? backgroundValue.image.width : 0,
-                (backgroundValue.image && backgroundValue.image.android) ? backgroundValue.image.height : 0,
                 backgroundValue.repeat,
                 backgroundValue.position,
                 backgroundValue.position ? createNativeCSSValueArray(backgroundValue.position) : null,

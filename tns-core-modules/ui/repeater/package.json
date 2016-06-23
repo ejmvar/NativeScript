@@ -1,2 +1,5 @@
-{ "name" : "repeater",
-  "main" : "repeater.js" }
+{
+    "name" : "repeater",
+    "main" : "repeater.js",
+    "bundleEntryPoint": true
+}

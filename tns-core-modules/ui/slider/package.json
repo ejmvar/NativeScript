@@ -1,2 +1,5 @@
-{ "name" : "slider",
-  "main" : "slider.js" }
+{
+    "name" : "slider",
+    "main" : "slider.js",
+    "bundleEntryPoint": true
+}

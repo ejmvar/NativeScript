@@ -1,2 +1,5 @@
-{ "name" : "placeholder",
-  "main" : "placeholder.js" }
+{
+    "name" : "placeholder",
+    "main" : "placeholder.js",
+    "bundleEntryPoint": true
+}

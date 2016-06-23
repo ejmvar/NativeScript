@@ -1,2 +1,5 @@
-{ "name" : "image",
-  "main" : "image.js" }
+{
+    "name" : "image",
+    "main" : "image.js",
+    "bundleEntryPoint": true
+}

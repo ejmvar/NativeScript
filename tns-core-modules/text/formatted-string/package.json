@@ -1,0 +1,5 @@
+{
+	"name" : "formatted-string",
+  	"main" : "formatted-string.js",
+    "bundleEntryPoint": true
+}

@@ -1,2 +1,5 @@
-{ "name" : "grid-layout",
-  "main" : "grid-layout.js" }
+{
+    "name" : "grid-layout",
+    "main" : "grid-layout.js",
+    "bundleEntryPoint": true
+}

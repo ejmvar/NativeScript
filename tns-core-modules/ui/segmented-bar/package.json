@@ -1,2 +1,5 @@
-{ "name" : "segmented-bar",
-  "main" : "segmented-bar.js" }
+{
+    "name" : "segmented-bar",
+    "main" : "segmented-bar.js",
+    "bundleEntryPoint": true
+}

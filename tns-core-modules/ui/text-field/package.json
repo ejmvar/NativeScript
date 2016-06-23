@@ -1,2 +1,5 @@
-{ "name" : "text-field",
-  "main" : "text-field.js" }
+{
+    "name" : "text-field",
+    "main" : "text-field.js",
+    "bundleEntryPoint": true
+}

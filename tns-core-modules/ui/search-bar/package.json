@@ -1,2 +1,5 @@
-{ "name" : "search-bar",
-  "main" : "search-bar.js" }
+{
+    "name" : "search-bar",
+    "main" : "search-bar.js",
+    "bundleEntryPoint": true
+}

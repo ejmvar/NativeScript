@@ -1,2 +1,5 @@
-{ "name" : "switch",
-  "main" : "switch.js" }
+{
+    "name" : "switch",
+    "main" : "switch.js",
+    "bundleEntryPoint": true
+}

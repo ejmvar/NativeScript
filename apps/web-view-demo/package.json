@@ -1,2 +1,5 @@
-{ "name" : "web-view-demo",
-  "main" : "app.js" }
+{
+    "name" : "web-view-demo",
+    "main" : "app.js",
+    "bundleEntryPoint": true
+}

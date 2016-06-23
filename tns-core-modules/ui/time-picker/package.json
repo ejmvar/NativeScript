@@ -1,2 +1,5 @@
-{ "name" : "time-picker",
-  "main" : "time-picker.js" }
+{
+    "name" : "time-picker",
+    "main" : "time-picker.js",
+    "bundleEntryPoint": true
+}

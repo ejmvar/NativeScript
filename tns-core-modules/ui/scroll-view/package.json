@@ -1,2 +1,5 @@
-{ "name" : "scroll-view",
-  "main" : "scroll-view.js" }
+{
+    "name" : "scroll-view",
+    "main" : "scroll-view.js",
+    "bundleEntryPoint": true
+}

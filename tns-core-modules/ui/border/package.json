@@ -1,2 +1,5 @@
-{ "name" : "border",
-  "main" : "border.js" }
+{
+    "name" : "border",
+    "main" : "border.js",
+    "bundleEntryPoint": true
+}

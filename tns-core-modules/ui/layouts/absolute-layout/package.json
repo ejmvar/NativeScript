@@ -1,2 +1,5 @@
-{ "name" : "absolute-layout",
-  "main" : "absolute-layout.js" }
+{
+    "name" : "absolute-layout",
+    "main" : "absolute-layout.js",
+    "bundleEntryPoint": true
+}

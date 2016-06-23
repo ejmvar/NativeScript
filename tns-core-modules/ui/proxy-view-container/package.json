@@ -1,2 +1,5 @@
-{ "name" : "proxy-view-container",
-  "main" : "proxy-view-container.js" }
+{
+    "name" : "proxy-view-container",
+    "main" : "proxy-view-container.js",
+    "bundleEntryPoint": true
+}

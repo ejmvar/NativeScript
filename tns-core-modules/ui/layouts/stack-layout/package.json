@@ -1,2 +1,5 @@
-{ "name" : "stack-layout",
-  "main" : "stack-layout.js" }
+{
+    "name" : "stack-layout",
+    "main" : "stack-layout.js",
+    "bundleEntryPoint": true
+}

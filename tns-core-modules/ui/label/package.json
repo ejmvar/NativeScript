@@ -1,2 +1,5 @@
-{ "name" : "label",
-  "main" : "label.js" }
+{
+    "name" : "label",
+    "main" : "label.js",
+    "bundleEntryPoint": true
+}

@@ -1,2 +1,5 @@
-{ "name" : "list-picker",
-  "main" : "list-picker.js" }
+{
+    "name" : "list-picker",
+    "main" : "list-picker.js",
+    "bundleEntryPoint": true
+}

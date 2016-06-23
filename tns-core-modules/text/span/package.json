@@ -1,0 +1,5 @@
+{
+	"name" : "span",
+  	"main" : "span.js",
+    "bundleEntryPoint": true
+}

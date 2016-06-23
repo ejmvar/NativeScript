@@ -1,2 +1,5 @@
-{ "name" : "progress",
-  "main" : "progress.js" }
+{
+    "name" : "progress",
+    "main" : "progress.js",
+    "bundleEntryPoint": true
+}

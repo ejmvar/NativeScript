@@ -1,2 +1,5 @@
-{ "name" : "ui/tab-view",
-  "main" : "tab-view.js" }
+{
+    "name" : "ui/tab-view",
+    "main" : "tab-view.js",
+    "bundleEntryPoint": true
+}

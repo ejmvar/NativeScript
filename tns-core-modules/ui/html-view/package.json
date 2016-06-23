@@ -1,2 +1,5 @@
-{ "name" : "html-view",
-  "main" : "html-view.js" }
+{
+    "name" : "html-view",
+    "main" : "html-view.js",
+    "bundleEntryPoint": true
+}

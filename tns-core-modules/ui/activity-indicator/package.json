@@ -1,2 +1,5 @@
-{ "name" : "activity-indicator",
-  "main" : "activity-indicator.js" }
+{
+    "name" : "activity-indicator",
+    "main" : "activity-indicator.js",
+    "bundleEntryPoint": true
+}

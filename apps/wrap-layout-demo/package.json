@@ -1,2 +1,5 @@
-{ "name" : "wrap-layout-demo",
-  "main" : "app.js" }
+{
+    "name" : "wrap-layout-demo",
+    "main" : "app.js",
+    "bundleEntryPoint": true
+}
